@@ -1,3 +1,0 @@
-# VCS
-# VCS
-# VCS
