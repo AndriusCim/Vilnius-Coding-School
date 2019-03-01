@@ -260,6 +260,7 @@ font-family: "Playfair Display";
 font-size: 101px;
 font-weight: 400;
 letter-spacing: 0.22px;
+margin: 0px 0px 85px 0px;
 }
 .transport-img{
     width: 877px;
@@ -294,10 +295,32 @@ margin: 47px 0px 76px 98px;
 }
 .transport-sidetext {
     width: 216px;
+    margin: 332px 0px 0px 69px;
+    text-align: justify;
+    
 }
 .transport-section {
     display: flex;
     align-items: flex-start;
     height: 100%;
+    margin-bottom:  96px;
 }
-    
+.transport-sidetext p {
+    color: #6e7478;
+font-family: "Avenir";
+font-size: 16px;
+font-weight: 400;
+line-height: 32px;
+letter-spacing: 0.06px;
+margin:  0
+}
+.transport-wiki {
+    font-family: "Avenir";
+font-size: 16px;
+font-weight: 400;
+line-height: 28px;
+/* Text style for "-, wikiped" */
+letter-spacing: 0.06px;
+color: #000000;
+text-align: right;
+}
