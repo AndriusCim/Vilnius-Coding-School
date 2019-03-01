@@ -303,7 +303,7 @@ margin: 47px 0px 76px 98px;
     display: flex;
     align-items: flex-start;
     height: 100%;
-    margin-bottom:  96px;
+
 }
 .transport-sidetext p {
     color: #6e7478;
@@ -323,4 +323,138 @@ line-height: 28px;
 letter-spacing: 0.06px;
 color: #000000;
 text-align: right;
+}
+.transport-more{
+color: #000000;
+font-family: "Playfair";
+font-size: 26px;
+font-weight: 150;
+margin: 96px 0px 0px 120px;
+
+
+}
+.transport-gal-name{
+    width: 423px;
+    height: auto;
+}
+.transport-gallery {
+    display: flex;
+    align-items: flex-start;
+    height: 100%;
+}
+.transport-gal-name h3{
+    color: #000000;
+font-family: "Playfair";
+font-size: 53px;
+font-weight: 400;
+text-transform: uppercase;
+letter-spacing: 8.81px;
+margin: 17px 0px 0px 0px;
+
+}
+.transport-container{
+    margin-left:  380px;
+}
+.transport-gal-name p{
+    color: #000000;
+font-family: "Avenir";
+font-size: 12px;
+font-weight: 400;
+text-transform: uppercase;
+/* Text style for "In london" */
+letter-spacing: 0.41px;
+margin: 13px;
+text-align: right;
+}
+.transport-gallery {
+    width:  1280px;
+    height:  280px;
+    margin-bottom: 347px;
+}
+.transport-gal-img{
+    width: 420px;
+height: 279px;
+margin-right: 35px;
+}
+.transport-gal-img-small{
+    width: 370px;
+height: 280px;
+}
+.transport-gallery img{
+    width: 100%;
+    height: auto;
+}
+.fact-section{
+    margin-bottom: 657px;
+}
+.fact-title{
+    width: 355px;
+    height: 82px;
+    margin:0px 0px 40px 380px;
+
+}
+.fact-title h2{
+    color: #000000;
+font-family: "Playfair";
+font-size: 47px;
+font-weight: 400;
+margin: 0;
+}
+.fact-title h4{
+    color: #000000;
+font-family: "Playfair";
+font-size: 25px;
+font-style: italic;
+font-weight: lighter;
+margin: 16px 0px 0px 202px;
+}
+.fact-container{
+        display: flex;
+        align-items: flex-start;
+        flex-wrap: nowrap;
+        height: 100%;
+        margin-left:  530px;
+        position: relative;
+  }
+.fact-text-left {
+    width: 205px;
+height: 256px;
+color: #6e7478;
+font-family: "Avenir";
+font-size: 16px;
+font-weight: 400;
+line-height: 30px;
+letter-spacing: 0.06px;
+text-align: right;
+margin: 0;
+}
+.fact-text-middle {
+    /* Style for "London Zoo" */
+width: 345px;
+height: 257px;
+color: #6e7478;
+font-family: "Avenir";
+font-size: 16px;
+font-weight: 400;
+line-height: 30px;
+/* Text style for "London Zoo" */
+letter-spacing: 0.06px;
+margin:  0px 76px 0px 100px;
+}
+.fact-text-right{
+    /* Style for "London Und" */
+width: 332px;
+height: 167px;
+color: #6e7478;
+font-family: "Avenir";
+font-size: 16px;
+font-weight: 400;
+line-height: 30px;
+/* Text style for "London Und" */
+letter-spacing: 0.06px;
+}
+.fact-section img{
+position: absolute;
+top:  300px;
+left: 66px;
 }
