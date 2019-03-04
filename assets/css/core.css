@@ -464,6 +464,7 @@ left: 66px;
     display: flex;
     flex-direction: row-reverse;
     height: 100%;
+    margin-bottom: 332px;
 }
 .night-img-container{
     width: 1280px;
@@ -514,3 +515,92 @@ align-self: flex-end;
 margin: 0;
 margin-right: 82px;
 }
+/* Places section */
+.places-text {
+    width: 656px;
+    height: auto;
+    margin-bottom: 96px;
+}
+.places-text h2{
+    color: #000000;
+font-family: "Playfair";
+font-size: 101px;
+font-weight: 400;
+letter-spacing: 0.22px;
+margin: 0px;
+margin-bottom: 15px;
+}
+.places-text p{
+    color: #6e7478;
+font-family: "Avenir";
+font-size: 16px;
+font-weight: 400;
+line-height: 30px;
+letter-spacing: 0.06px;
+margin: 0px;
+}
+.places-big-img {
+    width: 877px;
+height: 585px;
+position: relative;
+}
+.places-big-img img{
+    width: 100%;
+}
+.places-big-text{
+    width:  663px;
+    height: auto;
+    position: absolute;
+    text-align: right; 
+    bottom: 0;
+    right: 0;
+    margin:  0px 53px 51px 0px;
+}
+.places-big-text h3{
+    color: #ffffff;
+font-family: "Playfair";
+font-size: 53px;
+font-weight: 400;
+margin: 0;
+margin-bottom: 40px;
+}
+.places-big-text p{
+    color: #ffffff;
+font-family: "Avenir";
+font-size: 16px;
+font-weight: 400;
+line-height: 30px;
+letter-spacing: 0.06px;
+}
+.places-images {
+    display: flex;
+    justify-content: flex-start;
+    height: 100%;
+}
+.places-gal-img h4{
+color: #ffffff;
+font-family: "Playfair";
+font-size: 25px;
+font-weight: 400;
+position:  absolute;
+top: 0;
+right: 0;
+margin: 20px 20px 0px 0px;
+}
+.places-gal-img img{
+    width: 100%;
+}
+.places-gal-img {
+    width: 335px;
+    height: 180px;
+    position: relative;
+    margin: 0px 0px 22px 35px;
+}
+.places-font-color h4{
+    color: #303030;
+}
+.places-section {
+    margin-left: 380px;
+    margin-bottom: 264px;
+}
+/* Interested section */
