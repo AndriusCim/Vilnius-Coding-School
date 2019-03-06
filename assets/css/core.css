@@ -9,7 +9,7 @@ html {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-}
+}   
 body {
     font-family: 'Nitti Grotesk';
     -webkit-font-smoothing: antialiased;
@@ -38,47 +38,102 @@ main {
 2. HEADER
 =====================================================================
 */
-.top-nav {
+
+  header {
+    position: fixed;
+    top: 0;
     width: 100%;
+    z-index: 10;
+    
+  }
+  
+  
+  .navbar {
+    position: relative;
     height: 128px;
-}
-.logo-head {
-    width: 42px;
-    height: 43px;
-    margin: 43px 0px 0px 244px;
-    float: left;
-}
-.nav {
-    float: right;
-    width: 538px;
-    height: auto;
-    margin-top: 63px;
-}
-.nav ul {
-    list-style-type: none;
+    width: 100%;
+    transition: 0.5s ease;
+  }
+  
+  .navbar .nav {
     margin: 0;
     padding: 0;
-    overflow: hidden;
-}
-.nav li {
-    float: left;
-    margin: 0 30px;
-}
-.nav a {
-    text-decoration: none;
+    display: inline-block;
+    
+    margin-top: 50px;
+    margin-left: 716px;
+  }
+  
+  .navbar .nav .item {
+    list-style: none;
+    display: inline-block;
     color: #585c62;
     font-family: "Avenir";
     font-size: 14px;
     font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 1.12px;
-    text-align: center;
-    display: block;
-}
-.nav a:hover {
-    color: black;
-    font-weight: 600;
-}
+    margin-right: 84px;
+    transition: 0.5s ease;
+  }
+  .navbar .nav .item:hover{
+      color:  black;
+      font-weight: 500  ;
+  }
+
+  
+  .navbar .nav .item a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .navbar .logo {
+    float: left;
+    display: inline-block;
+    margin-top: 43px;
+    margin-left: 265px;
+    width: 42px;
+    height: 42px;
+    transition: 0.5s ease;
+  }
+  
+  .navbar .logo img {
+    width: 100%;
+  }
+  
+  .scrolled {
+   transition: 0s ease;
+  }
+  
+  .scrolled.navbar {
+    height: 50px; 
+    background-color: #ffffff;
+    transition: 0.5s ease;
+  
+  }
+  .scrolled.navbar .nav{
+        margin: 0;
+        padding: 0;
+        display: inline-block;
+        margin-top: 8px;
+        margin-left: 716px;
+  }
+  
+  .scrolled.navbar .nav .item {
+    line-height: 40px;
+    transition: 0.5s ease;
+  }
+  
+  
+  .scrolled.navbar .logo {
+    float: left;
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: 244px;
+    width: 30px;
+    height: 30px;
+    transition: 0.5s ease;
+  }
 /*
 =====================================================================
 3. HERO SECTION
@@ -87,6 +142,7 @@ main {
 .head-section {
     display: flex;
     justify-content: flex-end;
+    margin-top: 128px;  
 }
 .head-img {
     width: 1279px;
