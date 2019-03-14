@@ -39,7 +39,7 @@ main {
 =====================================================================
 */
 
-  header {
+  /* header {
     position: fixed;
     top: 0;
     width: 100%;
@@ -135,9 +135,7 @@ main {
     height: 30px;
     transition: 0.5s ease;
   }
-  .navbar .icon {
-    display: none;
-  }
+
   @media screen and (max-width: 600px) {
     .navbar a:not(:first-child) {display: none;}
     .navbar a.icon {
@@ -158,6 +156,187 @@ main {
       text-align: left;
     }
   }
+
+   */
+
+  /* header */
+  
+  .header {
+    background-color: #fff;
+    position: fixed;
+    max-width: 1660px   ;
+    width: 100%;
+    z-index: 3;
+    top: 0;
+    padding-top: 43px
+  }
+  
+  .header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+   
+  }
+  
+  .header li a {
+    display: block;
+    padding: 20px 40px;
+    text-decoration: none;
+    color: #585c62;
+    font-family: "Avenir";
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1.12px;
+    background-color: white;
+  }
+  .header li a:hover{
+    color:  black;
+    font-weight: 500;
+    transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
+
+  }
+  
+
+  
+  .header .logo{
+    float: left;
+    margin-left: 16%;
+ 
+    width: 42px;
+    height: 42px;
+   
+
+  }
+  
+  /* menu */
+  
+  .header .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height 0.1s ease-out;
+    margin-right: 7.3%;
+  }
+  
+  /* menu icon */
+  
+  .header .menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    padding: 32px 24px;
+    position: relative;
+    user-select: none;
+  }
+  
+  .header .menu-icon .navicon {
+    background: #333;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+  }
+  
+  .header .menu-icon .navicon:before,
+  .header .menu-icon .navicon:after {
+    background: #333;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+  }
+  
+  .header .menu-icon .navicon:before {
+    top: 5px;
+  }
+  
+  .header .menu-icon .navicon:after {
+    top: -5px;
+  }
+  
+  /* menu btn */
+  
+  .header .menu-btn {
+    display: none;
+  }
+  
+  .header .menu-btn:checked ~ .menu {
+    max-height: 240px;
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+  .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+    top: 0;
+  }
+  .scrolled {
+    transition: 0s ease;
+   }
+   
+   .scrolled.header {
+     
+     background-color: #ffffff;
+     transition: 0.5s ease;
+     padding-top: 0;
+   
+   }
+   .scrolled.header .menu .icon {
+     line-height: 40px;
+     transition: 0.5s ease;
+   }
+   
+   
+   .scrolled.header .logo {
+     float: left;
+     display: inline-block;
+     margin-top: 10px;
+     margin-right: 10px;
+     width: 30px;
+     height: 30px;
+     transition: all .2s ease-out;
+     
+   }
+  /* 48em = 768px */
+  @media only screen and (min-width: 950px) {
+
+    .header li {
+      float: left;
+      margin: 0;
+      
+    }
+    .menu li a {
+      padding: 20px 30px;
+      text-align: center;
+    
+    }
+    .header .menu {
+      clear: none;
+      float: right;
+      max-height: none;
+    
+    }
+    .header .menu-icon {
+      display: none;
+    }
+
+}
+
 /*
 =====================================================================
 3. HERO SECTION
@@ -166,16 +345,20 @@ main {
 .head-section {
     display: flex;
     justify-content: flex-end;
-    margin-top: 128px;  
+    margin-top: 128px;
+    position:relative;
+    
 }
 .head-img {
     width: 1279px;
-    height: 680px;
+    height: auto;
     float: right;
 }
 .head-img img {
-    width: 100%;
+    width: 77%;
     height: auto;
+    position: absolute;
+    bottom: 0;
 }
 .head-section h3 {
     color: #000000;
@@ -195,13 +378,9 @@ main {
     margin: 0;
 }
 .word-bg h1 {
-    width: 106px;
-    height: 663px;
-    width: 106px;
-    height: 663px;
     color: #000000;
     font-family: 'Playfair Display', serif;
-    font-size: 133px;
+    font-size: 7.25vw;
     font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 24.48px;
@@ -758,30 +937,33 @@ footer {
 11. GENERAL RESPONSIVE 
 =====================================================================
 */
+@media only screen and (max-width: 950px) {
+    .head-section{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: flex-start;
+    
+    }
+    .word-bg{
+    transform: none;
+    writing-mode: horizontal-tb; 
+    }
+    .head-img img{
+    position: static;
+    }
+    .word-bg {
+        align-self: center;
+    }
+    .head-section h3{
+        align-self: center;
+    }
 /*
 =====================================================================
 12. HEADER MEDIA RESPONSIVE 
 =====================================================================
 */
-@media(max-width:768px) {
-    .toggle {
-       display: block;
-    }
-    .links {
-       display: none;
-    }
-    .navbar .container .links ul li {
-       display: block;
-       text-align: center;
-       padding: 10px;
-    }
-    .navbar .container .links ul {
-       float: none;
-    }
-    .navbar .container .logo {
-       padding-top: 10px;
-    }
- }
+
 /*
 =====================================================================
 13. HERO SECTION RESPONSIVE 

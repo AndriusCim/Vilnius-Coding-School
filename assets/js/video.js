@@ -1,17 +1,17 @@
 $(document).ready(function() {
     $(window).on('scroll', function() {
-      if ($(window).scrollTop() > 100) {
-        $('.navbar').addClass('scrolled');
+      if ($(window).scrollTop() > 50) {
+        $('.header').addClass('scrolled');
       } else {
-        $('.navbar').removeClass('scrolled');
+        $('.header').removeClass('scrolled');
       }
     });
   });
   function myFunction() {
     var x = document.getElementById("myTopnav");
-    if (x.className === "navbar") {
-      x.className += " responsive";
+    if (x.className === "header") {
+      x.className += "header";
     } else {
-      x.className = "navbar";
+      x.className = "header";
     }
   }
