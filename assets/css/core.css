@@ -9,6 +9,7 @@ html {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    font-family: 1vw;
 }   
 body {
     font-family: 'Nitti Grotesk';
@@ -24,7 +25,7 @@ html, body {
 main {
     margin: 70px 0 70px;
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 1000px) {
     main {
         margin-top: 50px;
         margin-bottom: 125px;
@@ -313,7 +314,7 @@ main {
      
    }
   /* 48em = 768px */
-  @media only screen and (min-width: 950px) {
+  @media only screen and (min-width: 1000px) {
 
     .header li {
       float: left;
@@ -350,7 +351,7 @@ main {
     
 }
 .head-img {
-    width: 1279px;
+    width: 77%;
     height: auto;
     float: right;
 }
@@ -392,8 +393,11 @@ main {
 =====================================================================
 */
 .history-section {
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     margin-bottom: 266px;
+    margin-left: 22.9%;
 }
 .text-block-1 h2 {
     color: #000000;
@@ -418,13 +422,28 @@ main {
 }
 .text-block-1 {
     display: flex;
-    margin: 164px 130px 0px 613px;
+    justify-content: flex-end;
+    height: 100%;
+    margin: 164px 130px 0px 0px;
+
+}
+.text-block-1 img{
+    margin-top: 117px;
+    margin-left:  44%;
+    width: 85%
+    
 }
 .text-block-2 {
-    width: 535px;
+    width:  41.7%;
     height: auto;
-    margin-left: 385px;
     margin-top: 230px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin-right: 21.68%;
 }
 .text-block-2 h3 {
     color: #000000;
@@ -445,19 +464,22 @@ main {
     margin: 0;
 }
 .text-block-3 {
-    width: 724px;
+    max-width: 63%;
     height: auto;
-    margin-left: 380px;
+    display: flex;
+    height: 100%;
     margin-top: 131px;
+    flex-direction: column;
+ 
 }
 .text-block-3-container {
     display: flex;
     justify-content: flex-start;
     height: 100%;
-    width: 724px;
+    width: 98%;
 }
 .text-block-3 h5 {
-    width: 59px;
+
     height: 11px;
     color: #707070;
     font-family: "Avenir";
@@ -486,18 +508,19 @@ main {
     margin: 0;
     padding-top: 24px;
 }
-.history-section img {
-    position: absolute;
-    left: 77.1%;
-    top: 194px;
+.parent {
+    display: flex;
+    justify-content: flex-end;
+    height: 100%;
 }
+
 /*
 =====================================================================
 5. TRANSPORT SECTION
 =====================================================================
 */
 .transport-box{
-    margin-left: 379px;
+    margin-left: 22.9%;
 }
 .transport-box h2{
     color: #000000;
@@ -937,27 +960,7 @@ footer {
 11. GENERAL RESPONSIVE 
 =====================================================================
 */
-@media only screen and (max-width: 950px) {
-    .head-section{
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-        justify-content: flex-start;
-    
-    }
-    .word-bg{
-    transform: none;
-    writing-mode: horizontal-tb; 
-    }
-    .head-img img{
-    position: static;
-    }
-    .word-bg {
-        align-self: center;
-    }
-    .head-section h3{
-        align-self: center;
-    }
+
 /*
 =====================================================================
 12. HEADER MEDIA RESPONSIVE 
@@ -969,11 +972,56 @@ footer {
 13. HERO SECTION RESPONSIVE 
 =====================================================================
 */
+@media only screen and (max-width: 1000px) and (min-width: 320px) {
+    .head-section{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: flex-start;
+    
+    }
+    .word-bg{
+    transform: none;
+    writing-mode: horizontal-tb; 
+    }
+    .head-img {
+        width: 100%;
+    }
+    .head-img img{
+    position: static;
+    width: 100%;
+    }
+    .word-bg, .head-section h3 {
+        align-self: center;
+    }
+}
 /*
 =====================================================================
 14. HISTORY SECTION RESPONSIVE 
 =====================================================================
 */
+@media only screen and (max-width: 1200px) {
+    .history-section{
+        width: 100%;
+        justify-content: center;
+        margin: 6%;
+        text-align: center;
+
+    
+    }
+    .text-block-2, .text-block-3, .text-block-3-container{
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        height: 100%;
+        flex-direction: column;
+        padding: 0;
+        
+    }
+    .text-block-1 p{
+        padding-left: 10px;
+    }
+}
 /*
 =====================================================================
 15. TRANSPORT SECTION RESPONSIVE 
