@@ -519,10 +519,19 @@ main {
 5. TRANSPORT SECTION
 =====================================================================
 */
-.transport-box{
-    margin-left: 22.9%;
+.transport-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    height: 100%;
+    flex-direction: row;
+    justify-content: center;
 }
-.transport-box h2{
+ .transport-box{
+    margin-left: 11%;
+
+} 
+.transport-section h2{
     color: #000000;
     font-family: "Playfair Display";
     font-size: 101px;
@@ -531,16 +540,19 @@ main {
     margin: 0px 0px 85px 0px;
 }
 .transport-img{
-    width: 877px;
-    height: 585px;
+    width: 93.1%;
+    height: auto;
     position: relative;
+    margin-right: 7.16%;
+    
 }
 .transport-img img{
     width: 100%;
+    height: auto;
 }
 .transport-img-text {
     position: absolute;
-    top: 339px;
+    top: 57%;
 }
 .transport-img-text h3{
     color: #ffffff;
@@ -561,14 +573,11 @@ main {
     margin: 47px 0px 76px 98px;
 }
 .transport-sidetext {
-    width: 216px;
-    margin: 332px 0px 0px 69px;
+   
+    margin-top: 19%;
     text-align: justify;
-}
-.transport-section {
-    display: flex;
-    align-items: flex-start;
-    height: 100%;
+    width: 13%;
+    
 }
 .transport-sidetext p {
     color: #6e7478;
@@ -1006,7 +1015,7 @@ footer {
         justify-content: center;
         margin: 6%;
         text-align: center;
-
+        margin-bottom: 30%;
     
     }
     .text-block-2, .text-block-3, .text-block-3-container{
@@ -1021,12 +1030,20 @@ footer {
     .text-block-1 p{
         padding-left: 10px;
     }
+    .text-block-1 img{
+        width: 60%;
+    }
+    .transport-sidetext{
+        width: 93.1%
+    }
+    
 }
 /*
 =====================================================================
 15. TRANSPORT SECTION RESPONSIVE 
 =====================================================================
 */
+
 /*
 =====================================================================
 16. FACT SECTION RESPONSIVE 
