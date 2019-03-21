@@ -1,0 +1,1331 @@
+/*
+=====================================================================
+1. GENERAL
+=====================================================================
+*/
+
+html {
+	position: relative;
+	min-height: 100%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Nitti Grotesk';
+	-webkit-font-smoothing: antialiased;
+	color: #555555;
+	font-weight: bold;
+}
+
+html,
+body {
+	min-width: 320px;
+	max-width: 1660px;
+	margin: 0 auto;
+}
+
+main {
+	margin: 70px 0 70px;
+}
+
+@media only screen and (min-width: 1000px) {
+	main {
+		margin-top: 50px;
+		margin-bottom: 125px;
+	}
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+
+/*
+=====================================================================
+2. HEADER
+=====================================================================
+*/
+
+.header {
+	background-color: #fff;
+	position: fixed;
+	max-width: 1660px;
+	width: 100%;
+	z-index: 3;
+	top: 0;
+	padding-top: 43px
+}
+
+.header ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	overflow: hidden;
+}
+
+.header li a {
+	display: block;
+	padding: 20px 40px;
+	text-decoration: none;
+	color: #585c62;
+	font-family: "Avenir";
+	font-size: 14px;
+	font-weight: 400;
+	text-transform: uppercase;
+	letter-spacing: 1.12px;
+	background-color: white;
+}
+
+.header li a:hover {
+	color: black;
+	font-weight: 500;
+	transition: all 0.4s ease;
+	-webkit-transition: all 0.4s ease;
+}
+
+.header .logo {
+	float: left;
+	margin-left: 16%;
+	width: 42px;
+	height: 42px;
+}
+
+.header .menu {
+	clear: both;
+	max-height: 0;
+	transition: max-height 0.1s ease-out;
+	margin-right: 7.3%;
+}
+
+.header .menu-icon {
+	cursor: pointer;
+	display: inline-block;
+	float: right;
+	padding: 32px 24px;
+	position: relative;
+	user-select: none;
+}
+
+.header .menu-icon .navicon {
+	background: #333;
+	display: block;
+	height: 2px;
+	position: relative;
+	transition: background .2s ease-out;
+	width: 18px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+	background: #333;
+	content: '';
+	display: block;
+	height: 100%;
+	position: absolute;
+	transition: all .2s ease-out;
+	width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+	top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+	top: -5px;
+}
+
+.header .menu-btn {
+	display: none;
+}
+
+.header .menu-btn:checked~.menu {
+	max-height: 240px;
+}
+
+.header .menu-btn:checked~.menu-icon .navicon {
+	background: transparent;
+}
+
+.header .menu-btn:checked~.menu-icon .navicon:before {
+	transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked~.menu-icon .navicon:after {
+	transform: rotate(45deg);
+}
+
+.header .menu-btn:checked~.menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked~.menu-icon:not(.steps) .navicon:after {
+	top: 0;
+}
+
+.scrolled {
+	transition: 0s ease;
+}
+
+.scrolled.header {
+	background-color: #ffffff;
+	transition: 0.5s ease;
+	padding-top: 0;
+}
+
+.scrolled.header .menu .icon {
+	line-height: 40px;
+	transition: 0.5s ease;
+}
+
+.scrolled.header .logo {
+	float: left;
+	display: inline-block;
+	margin-top: 10px;
+	margin-right: 10px;
+	width: 30px;
+	height: 30px;
+	transition: all .2s ease-out;
+}
+
+
+/*
+=====================================================================
+3. HERO SECTION
+=====================================================================
+*/
+
+.head-section {
+	display: flex;
+	justify-content: flex-end;
+	margin-top: 128px;
+	position: relative;
+}
+
+.head-img {
+	width: 75%;
+	height: auto;
+	float: right;
+}
+
+.head-img img {
+	width: 75%;
+	height: auto;
+	position: absolute;
+	bottom: 0;
+}
+
+.head-section h3 {
+	color: #000000;
+	font-family: 'Playfair Display', serif;
+	font-size: 24px;
+	font-style: italic;
+	letter-spacing: 0.2px;
+	font-weight: lighter;
+	align-self: flex-end;
+	margin: 0px 20px 10px 0;
+}
+
+.word-bg {
+	text-orientation: mixed;
+	writing-mode: vertical-lr;
+	transform: rotate(180deg);
+	align-self: flex-end;
+	margin: 0;
+}
+
+.word-bg h1 {
+	color: #000000;
+	font-family: 'Playfair Display', serif;
+	font-size: 7.05vw;
+	font-weight: 400;
+	text-transform: uppercase;
+	letter-spacing: 24.48px;
+	margin: 0;
+}
+
+
+/*
+=====================================================================
+4. HISTORY SECTION
+=====================================================================
+*/
+
+.history-section {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	margin-bottom: 266px;
+	margin-left: 22.9%;
+}
+
+.head-img-responsive {
+	display: none;
+}
+
+.text-block-1 h2 {
+	color: #000000;
+	font-family: 'Playfair Display', serif;
+	font-size: 56px;
+	font-style: italic;
+	letter-spacing: 0.2px;
+	font-weight: lighter;
+	margin-top: 6px;
+}
+
+.text-block-1 p {
+	width: 490px;
+	height: 77px;
+	color: #6e7478;
+	font-family: "Avenir";
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 30px;
+	letter-spacing: 0.06px;
+	margin: 0;
+	padding-left: 43px;
+}
+
+.text-block-1 {
+	display: flex;
+	justify-content: flex-end;
+	height: 100%;
+	margin: 164px 130px 0px 0px;
+}
+
+.text-block-1 img {
+	margin-top: 117px;
+	margin-left: 44%;
+	width: 85%
+}
+
+.text-block-2 {
+	width: 41.7%;
+	height: auto;
+	margin-top: 230px;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	margin-right: 21.68%;
+}
+
+.text-block-2 h3 {
+	color: #000000;
+	font-family: "Playfair Display";
+	font-size: 36px;
+	font-weight: 400;
+	letter-spacing: 0.29px;
+	margin: 0;
+	padding-bottom: 32px;
+}
+
+.text-block-2 p {
+	color: #6e7478;
+	font-family: "Avenir";
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 30px;
+	letter-spacing: 0.06px;
+	margin: 0;
+}
+
+.text-block-3 {
+	width: 63%;
+	height: auto;
+	display: flex;
+	height: 100%;
+	margin-top: 131px;
+	flex-direction: column;
+}
+
+.text-block-3-container {
+	display: flex;
+	justify-content: flex-start;
+	height: 100%;
+	width: 98%;
+}
+
+.text-block-3 h5 {
+	height: 11px;
+	color: #707070;
+	font-family: "Avenir";
+	font-size: 14px;
+	font-weight: 400;
+	text-transform: uppercase;
+	letter-spacing: 1.12px;
+	margin: 0;
+}
+
+.text-block-3-container h2 {
+	color: #000000;
+	font-family: "Playfair Display";
+	font-size: 60px;
+	font-weight: 400;
+	letter-spacing: 0.22px;
+	margin: 0;
+	padding: 25px 53px 0px 0px;
+}
+
+.text-block-3-container p {
+	color: #6e7478;
+	font-family: "Avenir";
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 28px;
+	letter-spacing: 0.06px;
+	margin: 0;
+	padding-top: 24px;
+}
+
+.parent {
+	display: flex;
+	justify-content: flex-end;
+	height: 100%;
+}
+
+
+/*
+=====================================================================
+5. TRANSPORT SECTION
+=====================================================================
+*/
+
+.transport-section {
+	display: flex;
+	flex-wrap: wrap;
+	align-content: flex-start;
+	height: 100%;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.transport-box {
+	margin-left: 11%;
+}
+
+.transport-section h2 {
+	color: #000000;
+	font-family: "Playfair Display";
+	font-size: 6.084vw;
+	font-weight: 400;
+	letter-spacing: 0.22px;
+	margin: 0px 0px 85px 0px;
+}
+
+.transport-img {
+	width: 93.1%;
+	height: auto;
+	position: relative;
+	margin-right: 7.16%;
+}
+
+.transport-img img {
+	width: 100%;
+	height: auto;
+}
+
+.transport-img-text {
+	position: absolute;
+	top: 57%;
+}
+
+.transport-img-text h3 {
+	color: #ffffff;
+	font-family: "Playfair Display";
+	font-size: 3.012vw;
+	font-weight: 400;
+	letter-spacing: 0.22px;
+	margin: 0px;
+}
+
+.transport-img-text p {
+	color: #ffffff;
+	width: 452px;
+	font-family: "Avenir";
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 28px;
+	letter-spacing: 0.06px;
+	margin: 2.9% 0% 4.6% 5.9%;
+}
+
+.transport-sidetext {
+	margin-top: 19%;
+	text-align: justify;
+	width: 13%;
+}
+
+.transport-sidetext p {
+	color: #6e7478;
+	font-family: "Avenir";
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 32px;
+	letter-spacing: 0.06px;
+	margin: 0
+}
+
+.transport-wiki {
+	font-family: "Avenir";
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 28px;
+	letter-spacing: 0.06px;
+	color: #000000;
+	text-align: right;
+}
+
+.transport-more {
+	color: #000000;
+	font-family: "Playfair";
+	font-size: 26px;
+	font-weight: 200;
+	margin: 96px 0px 0px 120px;
+}
+
+.transport-gal-name {
+	width: 34.2%;
+	height: auto;
+}
+
+.transport-gallery {
+	display: flex;
+	flex-wrap: wrap;
+	height: 100%;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.transport-gal-name h3 {
+	color: #000000;
+	font-family: "Playfair";
+	font-size: 3.193vw;
+	font-weight: 400;
+	text-transform: uppercase;
+	letter-spacing: 6px;
+	margin: 17px 0px 0px 0px;
+}
+
+.transport-container {
+	width: 77.1%;
+	margin-bottom: 20.8%;
+	margin-left: 22.9%;
+}
+
+.transport-gal-name p {
+	color: #000000;
+	font-family: "Avenir";
+	font-size: 12px;
+	font-weight: 400;
+	text-transform: uppercase;
+	letter-spacing: 0.41px;
+	margin: 13px;
+	text-align: right;
+}
+
+.transport-gallery {}
+
+.transport-gal-img {
+	width: 420px;
+	height: 279px;
+	margin: 5px 7px;
+}
+
+.transport-gal-img-small {
+	width: 370px;
+	height: 280px;
+	margin: 5px 7px;
+}
+
+.transport-gallery img {
+	width: 100%;
+	height: auto;
+}
+
+
+/*
+=====================================================================
+6. FACT SECTION
+=====================================================================
+*/
+
+.fact-section {
+	margin-bottom: 388px;
+}
+
+.fact-title {
+	width: 21.38%;
+	margin: 0px 0px 40px 380px;
+}
+
+.fact-title h2 {
+	color: #000000;
+	font-family: "Playfair";
+	font-size: 47px;
+	font-weight: 400;
+	margin: 0;
+}
+
+.fact-title h4 {
+	color: #000000;
+	font-family: "Playfair";
+	font-size: 25px;
+	font-style: italic;
+	font-weight: lighter;
+	margin: 16px 0px 0px 202px;
+}
+
+.fact-container {
+	display: flex;
+	align-items: flex-start;
+	flex-wrap: nowrap;
+	height: 100%;
+	margin-left: 31.9%;
+	position: relative;
+}
+
+.fact-text-left {
+	width: 18.14%;
+	height: auto;
+	color: #6e7478;
+	font-family: "Avenir";
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 30px;
+	letter-spacing: 0.06px;
+	text-align: right;
+	margin: 0;
+}
+
+.fact-text-middle {
+	width: 30.53%;
+	height: auto;
+	color: #6e7478;
+	font-family: "Avenir";
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 30px;
+	letter-spacing: 0.06px;
+	margin: 0% 6.72% 0% 8.84%;
+}
+
+.fact-text-right {
+	width: 29.38%;
+	height: auto;
+	color: #6e7478;
+	font-family: "Avenir";
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 30px;
+	letter-spacing: 0.06px;
+}
+
+.fact-section img {
+	margin: 3% 0% 0% 31.5%;
+	width: 250%;
+}
+
+
+/*
+=====================================================================
+7. NIGHT SECTION
+=====================================================================
+*/
+
+.night-section {
+	display: flex;
+	flex-direction: row;
+	margin: 0% 0% 0% 16.38%;
+}
+
+.night-img-container {
+	width: 100%;
+	position: relative;
+}
+
+.night-img-container img {
+	width: 100%;
+}
+
+.night-text {
+	position: absolute;
+	width: 55%;
+	bottom: 5%;
+	left: 7.18%;
+}
+
+.night-text h2 {
+	color: #ffffff;
+	font-family: "Playfair";
+	font-size: 4.819vw;
+	font-weight: 400;
+	letter-spacing: 0.18px;
+	margin: 0px;
+}
+
+.night-text p {
+	color: #ffffff;
+	font-family: "Avenir";
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 28px;
+	letter-spacing: 0.06px;
+	margin: 0px;
+	margin-top: 6.42%;
+}
+
+.night-section h3 {
+	color: #000000;
+	font-family: "Playfair";
+	font-size: 29px;
+	font-weight: 400;
+	text-orientation: mixed;
+	writing-mode: vertical-lr;
+	transform: rotate(180deg);
+	align-self: flex-end;
+	margin: 0;
+	margin-right: 82px;
+}
+
+
+/*
+=====================================================================
+8. PLACES SECTION
+=====================================================================
+*/
+
+.places-text {
+	width: 54.21%;
+	margin-bottom: 96px;
+}
+
+.places-text h2 {
+	color: #000000;
+	font-family: "Playfair";
+	font-size: 5.500vw;
+	font-weight: 400;
+	letter-spacing: 0.22px;
+	margin: 0px;
+	margin-bottom: 15px;
+}
+
+.places-text p {
+	color: #6e7478;
+	font-family: "Avenir";
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 30px;
+	letter-spacing: 0.06px;
+	margin: 0px;
+}
+
+.places-big-img {
+	margin-right: 2.66%;
+	position: relative;
+	height: 52.83%;
+}
+
+.places-big-img img {
+	width: 100%;
+}
+
+.places-big-text {
+	width: 75.6%;
+	height: auto;
+	position: absolute;
+	text-align: right;
+	top: 57.40%;
+	right: 6.04%;
+}
+
+.places-big-text h3 {
+	color: #ffffff;
+	font-family: "Playfair";
+	font-size: 3.193vw;
+	font-weight: 400;
+	margin: 0;
+	margin-bottom: 6.84%;
+}
+
+.places-big-text p {
+	color: #ffffff;
+	font-family: "Avenir";
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 30px;
+	letter-spacing: 0.06px;
+	margin: 0;
+}
+
+.places-images {
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: row;
+	height: 100%;
+}
+
+.places-gal-img h4 {
+	color: #ffffff;
+	font-family: "Playfair";
+	font-size: 25px;
+	font-weight: 400;
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 20px 20px 0px 0px;
+}
+
+.places-gal-img img {
+	width: 100%;
+}
+
+.places-gal-img {
+	position: relative;
+}
+
+.places-gallery {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+}
+
+.places-font-color h4 {
+	color: #303030;
+}
+
+.places-section {
+	margin: 20% 0% 28.6% 22.9%;
+}
+
+
+/*
+=====================================================================
+9. INTERESTED SECTION
+=====================================================================
+*/
+
+.interested-text {
+	width: 37.59%;
+	height: auto;
+	margin-left: 22.9%;
+	margin-bottom: 104px;
+}
+
+.interested-text h2 {
+	color: #000000;
+	font-family: "Playfair";
+	font-size: 101px;
+	font-weight: 400;
+	letter-spacing: 0.22px;
+	margin: 0;
+	margin-bottom: 12px;
+}
+
+.interested-text p {
+	color: #6e7478;
+	font-family: "Avenir";
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 28px;
+	letter-spacing: 0.06px;
+	margin: 0;
+}
+
+
+/*
+=====================================================================
+10. FOOTER
+=====================================================================
+*/
+
+.footer-container {
+	width: 36.15%;
+	display: flex;
+	justify-content: space-between;
+	margin-left: 22.9%;
+}
+
+.footer-info h3 {
+	color: #000000;
+	font-family: "Playfair";
+	font-size: 32px;
+	font-weight: 400;
+	letter-spacing: 0.07px;
+	margin: 0;
+	margin-bottom: 34px;
+}
+
+.footer-info p {
+	color: #6e7478;
+	font-family: "Avenir";
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 28px;
+	letter-spacing: 0.06px;
+	margin: 0;
+}
+footer button{
+	background:none;
+	width: 135px;
+	height: 45px;
+	border-radius: 23px;
+	border: 1px solid #e1e1e1;
+	transition: 0.3s;
+}
+footer button:hover{
+	background-color: #e1e1e1 ;
+}
+.footer-book {
+	float: right;
+	margin: 15px 406px 0px 0px;
+	text-align: center;
+}
+.footer-book h4:hover{
+	color: white;
+	font-size: 18px;
+}
+.footer-book h4 {
+	color: #000000;
+	font-family: "Avenir";
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 28px;
+	letter-spacing: 0.06px;
+	display: inline-block;
+	margin: 0;
+	margin-top: 5px;
+	transition: 0.3s;
+}
+
+footer {
+	margin-bottom: 194px;
+}
+
+
+/*
+=====================================================================
+11. GENERAL RESPONSIVE 
+=====================================================================
+*/
+
+@media only screen and (max-width: 765px) {
+	html,
+	body {
+		width: 100%;
+		margin: 0;
+	}
+}
+
+
+/*
+=====================================================================
+12. HEADER MEDIA RESPONSIVE 
+=====================================================================
+*/
+
+@media only screen and (min-width: 991px) {
+	.header li {
+		float: left;
+		margin: 0;
+	}
+	.menu li a {
+		padding: 20px 30px;
+		text-align: center;
+	}
+	.header .menu {
+		clear: none;
+		float: right;
+		max-height: none;
+	}
+	.header .menu-icon {
+		display: none;
+	}
+}
+
+
+/*
+=====================================================================
+13. HERO SECTION RESPONSIVE 
+=====================================================================
+*/
+
+@media only screen and (max-width: 1200px) {
+	.head-section {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		justify-content: flex-start;
+	}
+	.word-bg {
+		transform: none;
+		writing-mode: horizontal-tb;
+	}
+	.head-img {
+		width: 100%;
+	}
+	.head-img img {
+		position: static;
+		width: 100%;
+	}
+	.word-bg,
+	.head-section h3 {
+		align-self: center;
+	}
+}
+
+
+/*
+=====================================================================
+14. HISTORY SECTION RESPONSIVE 
+=====================================================================
+*/
+
+@media only screen and (max-width: 1200px) {
+	.history-section {
+		justify-content: center;
+		text-align: center;
+		margin-bottom: 10%;
+	}
+	.text-block-2,
+	.text-block-3,
+	.text-block-3-container {
+		margin: 0;
+		display: flex;
+		justify-content: center;
+		height: 100%;
+		flex-direction: column;
+		padding: 0;
+	}
+	.text-block-1 p {
+		padding-left: 10px;
+	}
+	.text-block-1 img {
+		width: 60%;
+	}
+	.transport-sidetext {
+		width: 93.1%
+	}
+}
+
+@media only screen and (max-width: 765px) {
+	.history-section {
+		margin: 0 3%;
+	}
+	.text-block-1 h2,
+	.text-block-2 h3,
+	.text-block-3-container h2 {
+		color: #000000;
+		font-family: "Playfair Display";
+		font-size: 7.25vw;
+		font-weight: 400;
+		letter-spacing: 0.22px;
+		margin: 0;
+		padding: 4% 0;
+		font-style: normal;
+	}
+	.text-block-1 p {
+		padding-left: 0;
+		width: 100%;
+		height: auto;
+	}
+	.text-block-1 img {
+		display: none;
+	}
+	.history-section * {
+		margin: 0;
+		display: flex;
+		flex-direction: column;
+		position: relative;
+		text-align: left;
+		width: 100%;
+	}
+	.head-img-responsive {
+		width: 60%;
+		margin: 0 auto;
+	}
+}
+
+
+/*
+=====================================================================
+15. TRANSPORT SECTION RESPONSIVE 
+=====================================================================
+*/
+
+@media only screen and (max-width: 1660px) {
+	.transport-container {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		justify-content: center;
+		margin-left: 0;
+		width: 100%;
+	}
+	.transport-gallery {
+		justify-content: center;
+	}
+	.transport-gallery {
+		justify-content: center;
+	}
+	.transport-gal-name {
+		align-self: center;
+		text-align: center;
+	}
+	.transport-gal-name p {
+		text-align: center;
+	}
+	.transport-more {
+		margin: 15px auto;
+		align-self: center;
+		text-align: center;
+	}
+	.transport-sidetext {
+		width: 50%;
+		margin: 10% 0;
+	}
+	.transport-img {
+		margin: 10% 0;
+	}
+}
+
+@media only screen and (max-width: 1200px) {
+	.transport-sidetext {
+		width: 93.1%;
+		text-align: left;
+		margin: 0;
+	}
+	.transport-box,
+	.transport-img {
+		margin: 0;
+		width: 100%;
+	}
+	.transport-img-text {
+		position: relative;
+		text-align: left;
+		margin: 10% auto;
+		width: 93.1%;
+	}
+	.transport-img-text p,
+	.transport-img-text h3 {
+		color: #6e7478;
+		margin: 0;
+		width: 93.1%;
+	}
+	.transport-section h2 {
+		font-size: 9vw;
+		text-align: center;
+		margin: 10% 0;
+	}
+	.transport-img-text h3 {
+		color: #000000;
+		margin: 5% 0%;
+		text-align: center;
+		font-size: 5vw;
+	}
+}
+
+
+/*
+=====================================================================
+16. FACT SECTION RESPONSIVE 
+=====================================================================
+*/
+
+@media only screen and (max-width: 1200px) {
+	.fact-section {
+		margin-bottom: 20%;
+	}
+	.fact-container {
+		margin: 0;
+		justify-content: center;
+	}
+	.fact-title {
+		margin: 15px auto;
+		align-self: center;
+		text-align: center;
+	}
+	.fact-title h4 {
+		margin: 0;
+	}
+	.fact-text-left img {
+		width: 300%;
+	}
+}
+
+@media only screen and (max-width: 765px) {
+	.fact-container {
+		flex-direction: column;
+		margin: 0 3%;
+	}
+	.fact-text-left img {
+		display: none;
+	}
+	.fact-text-left,
+	.fact-text-middle,
+	.fact-text-right {
+		width: 100%;
+		text-align: left;
+		margin: 0;
+	}
+	.fact-title {
+		width: 100%;
+	}
+	.fact-title h2 {
+		font-size: 8vw;
+	}
+}
+
+
+/*
+=====================================================================
+17. NIGHT SECTION RESPONSIVE 
+=====================================================================
+*/
+
+@media only screen and (max-width: 1200px) {
+	.night-section {
+		margin: 10% 0% 20% 0%;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+	}
+	.night-section h3 {
+		transform: none;
+		writing-mode: horizontal-tb;
+		margin: 5% 0%;
+		align-self: center;
+		font-size: 5vw;
+	}
+	.night-img-container {
+		margin: 0 auto;
+	}
+	.night-container {
+		width: 100%;
+	}
+	.night-text {
+		width: 90%
+	}
+}
+
+
+/*
+=====================================================================
+18. PLACES SECTION RESPONSIVE 
+=====================================================================
+*/
+
+@media only screen and (max-width: 1400px) {
+	.places-section {
+		margin: 0;
+	}
+	.places-text {
+		width: 93.1%;
+		margin: 10% auto;
+	}
+	.places-big-text {
+		top: 20%;
+	}
+}
+
+@media only screen and (max-width: 765px) {
+	.places-big-img {
+		margin: 0;
+	}
+	.places-big-text {
+		position: relative;
+		top: 90%;
+	}
+	.places-images {
+		flex-direction: column;
+	}
+	.places-big-text,
+	.places-text {
+		position: relative;
+		text-align: left;
+		margin: 10% auto;
+	}
+	.places-gal-img {
+		display: flex;
+		flex-wrap: wrap;
+		height: 100%;
+		flex-direction: row;
+		margin: 5% auto;
+	}
+	.places-text {
+		width: 90%;
+	}
+	.places-big-text p,
+	.places-big-text h3 {
+		color: #6e7478;
+	}
+	.places-big-text h3 {
+		font-size: 6vw;
+	}
+}
+
+
+/*
+=====================================================================
+19. INTERESTED SECTION RESPONSIVE 
+=====================================================================
+*/
+
+@media only screen and (max-width: 1200px) {
+	.interersted-text {
+		margin: 0;
+		align-self: center;
+		margin: 10% auto;
+	}
+}
+
+@media only screen and (max-width: 765px) {
+	.interested-text {
+		margin: 10% auto;
+		width: 93.1%;
+	}
+	.interested-text h2 {
+		font-size: 9vw;
+		text-align: center;
+		margin: 10% 0;
+	}
+}
+
+
+/*
+=====================================================================
+20. FOOTER SECTION RESPONSIVE 
+=====================================================================
+*/
+
+@media only screen and (max-width: 1200px) {
+	.footer-container {
+		margin: 0;
+		align-self: center;
+		margin: 10% auto;
+		width: 50%;
+	}
+}
+
+@media only screen and (max-width: 765px) {
+	footer {
+		margin-bottom: 10%;
+	}
+	.footer-container {
+		margin: 0;
+		flex-direction: column;
+		margin: 10% auto;
+		width: 93.1%;
+		text-align: center;
+	}
+	.footer-info {
+		margin-top: 5%;
+	}
+	.footer-book {
+		float: none;
+		margin: 0;
+		margin: 10% auto;
+	}
+}
